@@ -40,7 +40,7 @@
     margin-top: 20px;
 
     >a,
-    >.artbook>a {
+    >.artbook>.artbook-text {
       color: #333333;
       text-decoration: none;
       padding: 10px 20px;
@@ -48,12 +48,37 @@
       font-size: 1.2rem;
     }
 
-    >a:hover {
+    >a:hover,
+    >.artbook>.artbook-text:hover,
+    >.artbook>.artbook-text.active {
       background: #f6f6f6;
     }
 
-    .artbook>.artbook-dropdown {
+    .artbook>.artbook-text {
+      cursor: pointer;
+    }
 
+    .artbook>.artbook-dropdown {
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: #1a1a1a;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin: 0 12px;
+
+      > a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+      }
+
+      > a:hover {
+        background-color: #f6f6f6;
+        border-radius: 6px;
+      }
     }
   }
 }
