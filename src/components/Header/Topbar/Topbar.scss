@@ -21,6 +21,13 @@
     > .topbar-motto {
       font-size: 1.5rem;
     }
+
+    >.topbar-divider {
+      >img {
+        width: 400px;
+        height: 48px;
+      }
+    }
   }
 
   >.navbar {
@@ -32,7 +39,8 @@
     border: 2px solid #696969;
     margin-top: 20px;
 
-    >a {
+    >a,
+    >.artbook>a {
       color: #333333;
       text-decoration: none;
       padding: 10px 20px;
@@ -42,6 +50,10 @@
 
     >a:hover {
       background: #f6f6f6;
+    }
+
+    .artbook>.artbook-dropdown {
+
     }
   }
 }

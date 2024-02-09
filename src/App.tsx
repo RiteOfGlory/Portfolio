@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.scss';
-import Topbar from "./components/Topbar/Topbar";
+import Header from "./components/Header/Header";
 
 export default function App() {
   return (
     <div className="App">
-      <Topbar />
+        <Header />
     </div>
   );
 }
