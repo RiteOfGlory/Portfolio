@@ -1,0 +1,86 @@
+@use "../../../global" as g;
+
+.topbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgb(69, 69, 69);
+
+  padding-top: 20px;
+
+  >.topbar-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: "Spelling Salt", cursive;
+
+    > .topbar-title {
+      font-size: 4rem;
+    }
+
+    > .topbar-motto {
+      font-size: 1.5rem;
+    }
+
+    >.topbar-divider {
+      >img {
+        width: 400px;
+        height: 48px;
+      }
+    }
+  }
+
+  >.navbar {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    border: 2px solid #696969;
+    margin-top: 20px;
+
+    >a,
+    >.artbook>.artbook-text {
+      color: #333333;
+      text-decoration: none;
+      padding: 10px 20px;
+
+      font-size: 1.2rem;
+    }
+
+    >a:hover,
+    >.artbook>.artbook-text:hover,
+    >.artbook>.artbook-text.active {
+      background: #f6f6f6;
+    }
+
+    .artbook>.artbook-text {
+      cursor: pointer;
+    }
+
+    .artbook>.artbook-dropdown {
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+
+      background-color: #1a1a1a;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      //margin: 0 12px;
+
+      > a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+      }
+
+      > a:hover {
+        background-color: #f6f6f6;
+        border-radius: 6px;
+      }
+    }
+  }
+}
