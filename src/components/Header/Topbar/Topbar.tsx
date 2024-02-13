@@ -14,6 +14,7 @@ function ArtbookDropdown() {
 
 export default function Topbar() {
     const [isArtbookDropdownOpen, setIsArtbookDropdownOpen] = useState<boolean>(false);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
     // Create a handler to click anywhere else on the page to close the dropdown
@@ -24,16 +25,23 @@ export default function Topbar() {
             }
         }
 
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        }
+
         document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("scroll", handleScroll);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside)
+            document.removeEventListener("scroll", handleScroll);
         }
     }, [dropdownRef]);
 
 
 
     return (
-        <div className="topbar">
+        // <div className="topbar">
+        <div className={`topbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="topbar-text">
                 {/*<div className="topbar-title">Theon Bigcockinson</div>*/}
                 {/*<div className="topbar-motto">Are ya winnin' son?</div>*/}
