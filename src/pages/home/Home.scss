@@ -1,0 +1,18 @@
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  //flex-grow: 1;
+
+  margin-top: 125px;
+  margin-bottom: -125px;
+
+  >.home-signature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >img {
+      max-height: 80vh;
+    }
+  }
+}
