@@ -25,15 +25,17 @@
     >.footer-links {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       flex-direction: column;
 
       gap: 24px;
 
-      >.footer-resume {
-        //margin-top: 100px;
-        margin-top: 66%;
-      }
+      margin-bottom: 3px;
+
+      //>.footer-resume {
+      //  //margin-top: 100px;
+      //  margin-top: 69%;
+      //}
 
       >.footer-resume>a {
         font-size: 1.5rem;

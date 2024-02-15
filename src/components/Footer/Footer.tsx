@@ -26,6 +26,10 @@ export default function Footer() {
                             <img src={WSvg} alt="W"/>
                         </a>
                     </div>
+                    <div className="footer-credits">
+                        <div>Design: Victor Alves</div>
+                        <div>Development: Vio-Eli</div>
+                    </div>
                 </div>
                 <img src={OnyxChibi} alt="Onyx"/>
             </div>
