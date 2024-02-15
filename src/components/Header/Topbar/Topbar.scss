@@ -5,11 +5,14 @@
   flex-direction: column;
   align-items: center;
 
-  background: rgba(69, 69, 69, 0.8);
+  background: #b1d0caCC;
 
   padding-top: 20px;
 
   transition: background 0.3s ease;
+
+  // dont allow text to be selected
+  user-select: none;
 
   >.topbar-text {
     display: flex;
@@ -45,21 +48,39 @@
 
     >a,
     >.artbook>.artbook-text {
-      color: #333333;
+      color: #212121;
       text-decoration: none;
       padding: 10px 20px;
 
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
 
     >a:hover,
-    >.artbook>.artbook-text:hover,
+    >.artbook:hover,
     >.artbook>.artbook-text.active {
-      background: #f6f6f6;
+      //background: #f6f6f6;
+      text-decoration: underline #ffc108;
     }
 
-    .artbook>.artbook-text {
+    .artbook {
       cursor: pointer;
+      >.artbook-text {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 8px;
+        img {
+          margin-top: 4px;
+          max-height: 8px;
+          width: auto;
+        }
+      }
+
+      >.artbook-text.active {
+        img {
+          transform: rotate(180deg);
+        }
+      }
     }
 
     .artbook>.artbook-dropdown {
@@ -68,25 +89,28 @@
       display: flex;
       flex-direction: column;
 
-      background-color: #1a1a1a;
-      border: 1px solid #ccc;
+      background-color: #b1d0ca;
+      border: 1px solid #610e0e;
       border-radius: 6px;
       //margin: 0 12px;
 
       > a {
-        color: #333;
+        color: #212121;
         text-decoration: none;
         padding: 10px 20px;
+
+        font-size: 1.1rem;
       }
 
       > a:hover {
-        background-color: #f6f6f6;
-        border-radius: 6px;
+        //background-color: #f6f6f6;
+        //border-radius: 6px;
+        text-decoration: underline #ffc108;
       }
     }
   }
 }
 
 .scrolled {
-  background: rgba(69, 69, 69, 1);
+  background: #b1d0ca;
 }

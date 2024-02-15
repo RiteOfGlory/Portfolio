@@ -2,6 +2,8 @@ import './Topbar.scss';
 import topbarDivider from './topbar-divider.svg';
 import {useState, useRef, useEffect} from "react";
 
+import DropDownArrow from './assets/dropdownArrow.svg';
+
 function ArtbookDropdown() {
     return (
         <div className="artbook-dropdown">
@@ -26,7 +28,7 @@ export default function Topbar() {
         }
 
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 0);
+            setIsScrolled(window.scrollY > 50);
         }
 
         document.addEventListener("mousedown", handleClickOutside);
@@ -57,7 +59,10 @@ export default function Topbar() {
                     onClick={ () => setIsArtbookDropdownOpen(!isArtbookDropdownOpen)}
                     ref={dropdownRef}
                 >
-                    <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : ''}`}>Artbook</div>
+                    <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : ''}`}>
+                        Artbook
+                        <img src={DropDownArrow} alt="dropdown arrow"/>
+                    </div>
                     {isArtbookDropdownOpen && <ArtbookDropdown />}
                 </div>
                 <a href="/">About Me</a>
