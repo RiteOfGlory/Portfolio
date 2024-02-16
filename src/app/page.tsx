@@ -1,6 +1,7 @@
 import React from "react";
 
-import MainSignature from "../pages/home/assets/MainSignature_GoldWords.webp";
+import MainSignature from "@/assets/Home/MainSignature_GoldWords.webp";
+import Image from 'next/image';
 import './Home.scss';
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
     return (
         <div className="home-wrapper">
             <div className="home-signature">
-                <img src={MainSignature} alt="Rite Of Glory"/>
+                <Image src={MainSignature} alt="Victor's Signature" />
             </div>
         </div>
     )
