@@ -1,3 +1,5 @@
+'use client'
+
 import './Topbar.scss';
 import topbarDivider from '../../../assets/Header/topbar-divider.svg';
 import {useState, useRef, useEffect} from "react";
