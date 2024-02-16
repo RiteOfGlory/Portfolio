@@ -1,8 +1,8 @@
 import './Topbar.scss';
-import topbarDivider from './topbar-divider.svg';
+import topbarDivider from '../../../assets/Header/topbar-divider.svg';
 import {useState, useRef, useEffect} from "react";
 
-import DropDownArrow from './assets/dropdownArrow.svg';
+import DropDownArrow from '../../../assets/Header/dropdownArrow.svg';
 
 function ArtbookDropdown({ active }: { active: boolean } ) {
     return (

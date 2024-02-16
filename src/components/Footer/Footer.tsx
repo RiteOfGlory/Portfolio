@@ -1,13 +1,13 @@
 import './Footer.scss';
 
-import NovaChibi from './assets/Nova_sticker_cropped.webp';
-import OnyxChibi from './assets/Onyx_sticker_cropped.webp';
+import NovaChibi from '../../assets/Footer/Nova_sticker_cropped.webp';
+import OnyxChibi from '../../assets/Footer/Onyx_sticker_cropped.webp';
 // import InstaSvg from './assets/icons/insta.svg';
-import { ReactComponent as InstaSvg } from './assets/icons/insta.svg';
+import { ReactComponent as InstaSvg } from '@/assets/Footer/icons/insta.svg';
 // import TwitterSvg from './assets/icons/twitter.svg';
-import { ReactComponent as TwitterSvg } from './assets/icons/twitter.svg';
+import { ReactComponent as TwitterSvg } from '@/assets/Footer/icons/twitter.svg';
 // import WSvg from './assets/icons/W.svg';
-import { ReactComponent as WSvg } from './assets/icons/W.svg';
+import { ReactComponent as WSvg } from '@/assets/Footer/icons/W.svg';
 
 export default function Footer() {
     return (
