@@ -83,8 +83,27 @@
 
       >.artbook-text.active {
         img {
-          transform: rotate(180deg);
+          //animation: dropdown-arrow-flip-up 0.25s forwards;
+          transform: rotateX(180deg);
+          transition: 0.25s;
         }
+      }
+
+      >.artbook-text.not-active {
+        img {
+          //animation: dropdown-arrow-flip-down 0.25s forwards;
+          transform: rotateX(0deg);
+          transition: 0.25s;
+        }
+      }
+
+      >.artbook-dropdown.active {
+        opacity: 1;
+        transition: 0.25s;
+      }
+      >.artbook-dropdown.not-active {
+        opacity: 0;
+        transition: 0.25s;
       }
     }
 
@@ -100,10 +119,13 @@
       border-radius: 6px;
       //margin: 0 12px;
 
+      //opacity: 0;
+
       > a {
         color: #212121;
         text-decoration: none;
         margin: 10px 20px;
+        padding-bottom: 2px;
 
         font-size: 1.1rem;
 

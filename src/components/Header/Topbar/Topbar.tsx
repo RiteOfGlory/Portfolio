@@ -4,9 +4,9 @@ import {useState, useRef, useEffect} from "react";
 
 import DropDownArrow from './assets/dropdownArrow.svg';
 
-function ArtbookDropdown() {
+function ArtbookDropdown({ active }: { active: boolean } ) {
     return (
-        <div className="artbook-dropdown">
+        <div className={`artbook-dropdown ${active ? 'active' : 'not-active'}`}>
             <a href="/public">Concept Art</a>
             <a href="/public">Webdesign</a>
             <a href="/public">Sketches</a>
@@ -59,11 +59,12 @@ export default function Topbar() {
                     onClick={ () => setIsArtbookDropdownOpen(!isArtbookDropdownOpen)}
                     ref={dropdownRef}
                 >
-                    <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : ''}`}>
-                        Artbook
+                    <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : 'not-active'}`}>
+                        <div className="artbook-actual-text">Artbook</div>
                         <img src={DropDownArrow} alt="dropdown arrow"/>
                     </div>
-                    {isArtbookDropdownOpen && <ArtbookDropdown />}
+                    {/*{isArtbookDropdownOpen && <ArtbookDropdown active={isArtbookDropdownOpen}/>}*/}
+                    <ArtbookDropdown active={isArtbookDropdownOpen}/>
                 </div>
                 <a href="/">About Me</a>
             </div>
