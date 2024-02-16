@@ -1,10 +1,12 @@
 'use client'
 
 import './Topbar.scss';
-import topbarDivider from '../../../assets/Header/topbar-divider.svg';
+import Image from 'next/image';
+
+import topbarDivider from '@/assets/Header/topbar-divider.svg';
 import {useState, useRef, useEffect} from "react";
 
-import DropDownArrow from '../../../assets/Header/dropdownArrow.svg';
+import DropDownArrow from '@/assets/Header/dropdownArrow.svg';
 
 function ArtbookDropdown({ active }: { active: boolean } ) {
     return (
@@ -51,7 +53,8 @@ export default function Topbar() {
                 {/*<div className="topbar-motto">Are ya winnin' son?</div>*/}
                 <div className="topbar-title">Victor Alves</div>
                 <div className="topbar-divider">
-                    <img src={topbarDivider} alt="divider"/>
+                    {/*<img src={topbarDivider} alt="divider"/>*/}
+                    <Image src={topbarDivider} alt="divider"/>
                 </div>
             </div>
             <div className="navbar">
@@ -63,7 +66,8 @@ export default function Topbar() {
                 >
                     <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : 'not-active'}`}>
                         <div className="artbook-actual-text">Artbook</div>
-                        <img src={DropDownArrow} alt="dropdown arrow"/>
+                        {/*<img src={DropDownArrow} alt="dropdown arrow"/>*/}
+                        <Image src={DropDownArrow} alt="dropdown arrow"/>
                     </div>
                     {/*{isArtbookDropdownOpen && <ArtbookDropdown active={isArtbookDropdownOpen}/>}*/}
                     <ArtbookDropdown active={isArtbookDropdownOpen}/>
