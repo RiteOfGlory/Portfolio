@@ -24,18 +24,18 @@ export default function Footer() {
                     <div className="footer-socials">
                         <a href="/">
                             {/*<img src={InstaSvg} alt="Instagram"/>*/}
-                            {/*<InstaSvg />*/}
-                            <Image src={InstaSvg} alt="Instagram"/>
+                            <InstaSvg />
+                            {/*<Image src={InstaSvg} alt="Instagram"/>*/}
                         </a>
                         <a href="/">
                             {/*<img src={TwitterSvg} alt="Twitter"/>*/}
-                            {/*<TwitterSvg />*/}
-                            <Image src={TwitterSvg} alt="Twitter"/>
+                            <TwitterSvg />
+                            {/*<Image src={TwitterSvg} alt="Twitter"/>*/}
                         </a>
                         <a href="/">
                             {/*<img src={WSvg} alt="W"/>*/}
-                            {/*<WSvg />*/}
-                            <Image src={WSvg} alt="W"/>
+                            <WSvg />
+                            {/*<Image src={WSvg} alt="W" />*/}
                         </a>
                     </div>
                     <div className="footer-credits">
