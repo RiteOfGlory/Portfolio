@@ -1,6 +1,6 @@
 import React from "react";
 
-import MainSignature from "./assets/MainSignature_GoldWords.webp";
+import MainSignature from "../pages/home/assets/MainSignature_GoldWords.webp";
 import './Home.scss';
 
 export default function Home() {
