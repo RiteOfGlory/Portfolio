@@ -18,10 +18,10 @@ export default function Footer() {
                         <a href="/">Resume</a>
                     </div>
                     <div className="footer-socials">
-                        <a href="/">
+                        <a href="https://www.instagram.com/riteofglory">
                             <InstaSvg />
                         </a>
-                        <a href="/">
+                        <a href="https://x.com/RiteOfGlory?s=20">
                             <TwitterSvg />
                         </a>
                         <a href="/">
