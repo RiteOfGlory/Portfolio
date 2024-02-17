@@ -1,4 +1,3 @@
-import './Footer.scss';
 import Image from 'next/image';
 
 import NovaChibi from '@/assets/Footer/Nova_sticker_cropped.webp';
@@ -6,6 +5,8 @@ import OnyxChibi from '@/assets/Footer/Onyx_sticker_cropped.webp';
 import InstaSvg from '@/assets/Footer/icons/insta.svg';
 import TwitterSvg from '@/assets/Footer/icons/twitter.svg';
 import WSvg from '@/assets/Footer/icons/W.svg';
+
+import './Footer.scss';
 
 export default function Footer() {
     return (

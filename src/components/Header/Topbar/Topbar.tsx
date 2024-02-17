@@ -1,16 +1,18 @@
 'use client'
 
-import './Topbar.scss';
 import Image from 'next/image';
 import localFont from 'next/font/local';
-
-// @ts-ignore
-import topbarDivider from '@/assets/Header/topbar-divider.svg?url';
 import {useState, useRef, useEffect} from "react";
 
+// TS doesn't like the custom ?url on the import (changes the type of the import for svgr)
+// @ts-ignore
+import topbarDivider from '@/assets/Header/topbar-divider.svg?url';
 // @ts-ignore
 import DropDownArrow from '@/assets/Header/dropdownArrow.svg?url';
 
+import './Topbar.scss';
+
+// Our custom font
 const SpellingSaltFont = localFont({
     src: '../../../assets/fonts/spellingsalt.ttf',
     display: 'swap',
@@ -32,14 +34,17 @@ export default function Topbar() {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
 
-    // Create a handler to click anywhere else on the page to close the dropdown
+    // Handlers
     useEffect(() => {
+
+        // Click anywhere outside the dropdown to close it
         function handleClickOutside(event: MouseEvent) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
                 setIsArtbookDropdownOpen(false);
             }
         }
 
+        // Scroll handler to make nav part of the topbar 'sticky'
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
         }
@@ -55,7 +60,6 @@ export default function Topbar() {
 
 
     return (
-        // <div className="topbar">
         <div className={`topbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="topbar-text">
                 <div className="topbar-title" style={SpellingSaltFont.style} >Victor Alves</div>
