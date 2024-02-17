@@ -1,20 +1,25 @@
 @font-face {
   font-family: 'Spelling Salt';
-  src: url('../public/spellingsalt.ttf') format('truetype');
+  src: url("/src/assets/fonts/spellingsalt.ttf") format('truetype');
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif, 'Spelling Salt';
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif, 'Spelling Salt';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   background-color: #151515;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
 }
