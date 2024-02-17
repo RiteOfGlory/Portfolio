@@ -3,10 +3,12 @@
 import './Topbar.scss';
 import Image from 'next/image';
 
-import topbarDivider from '@/assets/Header/topbar-divider.svg';
+// @ts-ignore
+import topbarDivider from '@/assets/Header/topbar-divider.svg?url';
 import {useState, useRef, useEffect} from "react";
 
-import DropDownArrow from '@/assets/Header/dropdownArrow.svg';
+// @ts-ignore
+import DropDownArrow from '@/assets/Header/dropdownArrow.svg?url';
 
 function ArtbookDropdown({ active }: { active: boolean } ) {
     return (
