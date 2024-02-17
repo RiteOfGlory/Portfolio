@@ -2,6 +2,7 @@
 
 import './Topbar.scss';
 import Image from 'next/image';
+import localFont from 'next/font/local';
 
 // @ts-ignore
 import topbarDivider from '@/assets/Header/topbar-divider.svg?url';
@@ -9,6 +10,12 @@ import {useState, useRef, useEffect} from "react";
 
 // @ts-ignore
 import DropDownArrow from '@/assets/Header/dropdownArrow.svg?url';
+
+const SpellingSaltFont = localFont({
+    src: '../../../assets/fonts/spellingsalt.ttf',
+    display: 'swap',
+    weight: '400'
+})
 
 function ArtbookDropdown({ active }: { active: boolean } ) {
     return (
@@ -53,7 +60,7 @@ export default function Topbar() {
             <div className="topbar-text">
                 {/*<div className="topbar-title">Theon Bigcockinson</div>*/}
                 {/*<div className="topbar-motto">Are ya winnin' son?</div>*/}
-                <div className="topbar-title">Victor Alves</div>
+                <div className="topbar-title" style={SpellingSaltFont.style} >Victor Alves</div>
                 <div className="topbar-divider">
                     {/*<img src={topbarDivider} alt="divider"/>*/}
                     <Image src={topbarDivider} alt="divider"/>
