@@ -58,11 +58,8 @@ export default function Topbar() {
         // <div className="topbar">
         <div className={`topbar ${isScrolled ? 'scrolled' : ''}`}>
             <div className="topbar-text">
-                {/*<div className="topbar-title">Theon Bigcockinson</div>*/}
-                {/*<div className="topbar-motto">Are ya winnin' son?</div>*/}
                 <div className="topbar-title" style={SpellingSaltFont.style} >Victor Alves</div>
                 <div className="topbar-divider">
-                    {/*<img src={topbarDivider} alt="divider"/>*/}
                     <Image src={topbarDivider} alt="divider"/>
                 </div>
             </div>
@@ -75,10 +72,8 @@ export default function Topbar() {
                 >
                     <div className={`artbook-text ${isArtbookDropdownOpen ? 'active' : 'not-active'}`}>
                         <div className="artbook-actual-text">Artbook</div>
-                        {/*<img src={DropDownArrow} alt="dropdown arrow"/>*/}
                         <Image src={DropDownArrow} alt="dropdown arrow"/>
                     </div>
-                    {/*{isArtbookDropdownOpen && <ArtbookDropdown active={isArtbookDropdownOpen}/>}*/}
                     <ArtbookDropdown active={isArtbookDropdownOpen}/>
                 </div>
                 <a href="/">About Me</a>
