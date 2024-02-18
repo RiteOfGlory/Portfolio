@@ -22,9 +22,9 @@ const SpellingSaltFont = localFont({
 function ArtbookDropdown({ active }: { active: boolean } ) {
     return (
         <div className={`artbook-dropdown ${active ? 'active' : 'not-active'}`}>
-            <a href="/public">Concept Art</a>
-            <a href="/public">Webdesign</a>
-            <a href="/public">Sketches</a>
+            <a href="/art/concept">Concept Art</a>
+            <a href="/art/webdesign">Webdesign</a>
+            <a href="/art/sketches">Sketches</a>
         </div>
     );
 }
@@ -80,7 +80,7 @@ export default function Topbar() {
                     </div>
                     <ArtbookDropdown active={isArtbookDropdownOpen}/>
                 </div>
-                <a href="/">About Me</a>
+                <a href="/about">About Me</a>
             </div>
         </div>
     );
